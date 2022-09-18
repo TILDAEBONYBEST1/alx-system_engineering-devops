@@ -1,6 +1,4 @@
-# Changes SSH config file
-exec { 'echo':
-  path    => 'usr/bin:/bin',
-  command => 'echo "    IdentityFile ~/.ssh/school\n    PasswordAuthentication no" >> /etc/ssh/ssh_config',
-  returns => [0,1],
-}
+#!/usr/bin/env bash
+# Connecting to the server using a private key
+ssh -i ~/.ssh/school ubuntu@3.238.126.83
+p
